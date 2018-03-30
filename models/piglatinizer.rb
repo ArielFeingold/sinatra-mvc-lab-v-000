@@ -1,12 +1,26 @@
 class PigLatinizer
 
   def piglatinize(word)
-    if word =~ (/\A[aeiou]/i)
-        word = word + 'way'
-    elsif word =~ (/\A[^aeiou]/i)
-      match = /\A[^aeiou]/i.match(word)
-      word = match.post_match + match.to_s + 'ay'
-    end
-    word
-  end
+    str1="aeiou"
+      str2=(/\A[aeiou]/)
+      vowel = str1.scan(/\w/)
+      alpha =('a'..'z').to_a
+      con = (alpha - vowel).join
+      word = str.scan(/\w/)
+      if  #first rule
+        str =~ str2
+        str + "ay"
+      elsif # second rule
+        str != str2
+        s = str.slice!(/^./)
+        str + s + "ay"
+      elsif
+        word[0.1]=~(/\A[con]/)
+        s = str.slice!(/^../)
+        str + s + "ay"
+      else
+        word[0..2]=~(/\A[con]/)
+        s = str.slice!(/^.../)
+        str + s + "ay"
+      end
 end
