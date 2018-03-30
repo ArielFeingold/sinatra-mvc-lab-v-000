@@ -1,3 +1,4 @@
 <h1>Your Piglatinize Text</h1>
 
-<h2><%= @input %></h2>
+<% s = PigLatinizer.new %>
+<h2><%= s.piglatinize(@input) %></h2>
