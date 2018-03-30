@@ -8,6 +8,7 @@ class App < Sinatra::Base
 
   post '/piglatinize' do
     @input = params["user_phrase"]
+    binding.pry
     erb :piglatinize
   end
 end
