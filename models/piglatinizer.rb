@@ -1,5 +1,5 @@
 class PigLatinizer
-
+binding.pry
   if word =~ (/\A[aeiou]/i)
       word = word + 'ay'
   elsif word =~ (/\A[^aeiou]/i)
@@ -7,5 +7,4 @@ class PigLatinizer
     word = match.post_match + match.to_s + 'ay'
   end
     word
-
 end
